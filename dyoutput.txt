@@ -1,0 +1,8 @@
+job1: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=64
+fio-3.7
+Starting 1 process
+job1: you need to specify size=
+fio: pid=0, err=22/file:filesetup.c:950, func=total_file_size, error=Invalid argument
+
+
+Run status group 0 (all jobs):
