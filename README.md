@@ -1,2 +1,2 @@
 # fiobot
-Fio Test Bot to test NVMe workload
+Fio Bot to test NVMe workload
