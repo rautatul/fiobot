@@ -34,7 +34,7 @@ def create_fio_conf(input_str, available_drives):
 
     # print(available_drives)
     if parameters["select_dr"] is not None:
-        selected_drives=parameters["select_dr"].split("#")
+        selected_drives=parameters["select_dr"].split("&")
         available_drives=selected_drives
         parameters["drives"] = len(available_drives)
     parameters["test_format"] = test_format_mapping[parameters["test_format"]]

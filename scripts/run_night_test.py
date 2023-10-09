@@ -23,7 +23,9 @@ def run_night_test(params, outputname):
     with open('dyoutput.txt', 'r') as file:
         for line in file:
             outputs.append(line)
-
+    if '/' in outputname:
+        outputname = outputname.split("/")[-1]
+        outputname = "nightly/" + outputname
     results = parse_fio_output(''.join(outputs))
     # date = datetime.datetime.now().strftime('%Y_%m_%d_%H_%M')
     with open(f'{outputname}.txt', 'w') as f:
@@ -43,6 +45,7 @@ def run_night_test(params, outputname):
     with open(f'{outputname}.txt', 'a') as f:
         f.write("\n===========================================================\n")
         f.write("RESULTS:\n")
+        f.write("Time (s)\tread MB/s\twrite MB/s\tread IOPS\twrite IOPS\n")
         for item in result_value:
             f.write(item)
             f.write("\n")

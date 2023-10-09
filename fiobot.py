@@ -64,9 +64,9 @@ if __name__ == "__main__":
             print("nightly test turned off")
         elif "insert" in args.night:
             pwd = os.getcwd()
-            command_new = "/usr/bin/python3 " + str(pwd) + "/main.py -n \"" + str(args.night[13:]) + "\""
+            command_new = "/usr/bin/python3 " + str(pwd) + "/main.py -n \"" + str(args.night[12:]) + "\""
             request_time = str(args.night[7:12]) + "* * *"
-            index1 = command_new.find("test_length.")
+            index1 = command_new.find("test_length")
             index2 = command_new.find(" ", index1)
             if index1 == None:
                 print("please specify a test_length")
